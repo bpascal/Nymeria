@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/layoutTitleBar"
+
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/app_main_color">
+
+
+        <LinearLayout
+            android:id="@+id/viewBack"
+            android:layout_width="40dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/cbl_item_bg"
+            android:gravity="center">
+
+            <View
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@mipmap/title_icon_back" />
+        </LinearLayout>
+
+
+        <!--标题-->
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="完善卡信息"
+            android:textColor="@color/common_text_black"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layoutTitleBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="50dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:background="@color/app_main_color">
+
+
+                <LinearLayout
+                    android:id="@+id/cardInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@mipmap/card_addinfo_bg">
+
+
+                    <ImageView
+                        android:id="@+id/imageViewBankIcon"
+                        android:layout_width="46.67dp"
+                        android:layout_height="46.67dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@mipmap/bankcard_icon_default" />
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingTop="20dp">
+
+                        <TextView
+                            android:id="@+id/textViewBankName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="银行名字"
+                            android:textColor="#333"
+                            android:textSize="24dp" />
+
+                        <TextView
+                            android:id="@+id/textViewBankCardType"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="卡类型"
+                            android:textColor="#333"
+                            android:textSize="12dp" />
+
+
+                        <TextView
+                            android:id="@+id/textViewBankCardNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="**** **** **** ****"
+                            android:textColor="#333"
+                            android:textSize="25dp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <!--用户名-->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/common_gap_gray" />
+
+            <!--密码-->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/common_gap_gray" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#fff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="请输入如下信息进行绑定:"
+                    android:textColor="#666666"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="20dp"
+                android:background="#ededed" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_horizontal|bottom"
+                android:orientation="horizontal">
+
+
+                <!--标题-->
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="20dp"
+                    android:text="手机号"
+                    android:textColor="#333"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/editTextMbl"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:textCursorDrawable="@drawable/color_cur"
+
+                    android:digits="1234567890"
+                    android:gravity="center_vertical|right"
+                    android:hint="请输入手机号"
+                    android:inputType="numberDecimal"
+                    android:lines="1"
+                    android:maxLength="13"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text=""
+                    android:textColor="#333"
+                    android:textColorHint="#c1c1c1"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="20dp"
+                android:background="#ededed" />
+
+            <LinearLayout
+                android:id="@+id/creditCarInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:gravity="center_horizontal|bottom"
+                    android:orientation="horizontal">
+
+
+                    <!--标题-->
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:text="CVV2"
+                        android:textColor="#333"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/editTextCVV2"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:textCursorDrawable="@drawable/color_cur"
+
+                        android:background="@color/transparent"
+                        android:digits="1234567890"
+                        android:gravity="center_vertical|right"
+                        android:hint="卡背面3位数字"
+                        android:inputType="numberDecimal"
+                        android:lines="1"
+                        android:maxLength="3"
+                        android:paddingLeft="10dp"
+
+                        android:paddingRight="10dp"
+                        android:textColor="#333"
+                        android:textColorHint="#c1c1c1"
+                        android:textSize="16sp" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="#ededed" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:gravity="center_horizontal|bottom"
+                    android:orientation="horizontal">
+
+
+                    <!--标题-->
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:text="有效期"
+                        android:textColor="#333"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/editTextDate"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="@color/transparent"
+                        android:textCursorDrawable="@drawable/color_cur"
+
+                        android:digits="1234567890"
+                        android:gravity="center_vertical|right"
+                        android:hint="4位数字，如1201"
+                        android:inputType="numberDecimal"
+                        android:lines="1"
+                        android:maxLength="4"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColor="#333"
+                        android:textColorHint="#c1c1c1"
+                        android:textSize="16sp" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="#ededed" />
+
+                <!--标题-->
+                <TextView
+                    android:id="@+id/textViewWhatIsCVV2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="right"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="什么是CVV2和有效期"
+                    android:textColor="#0099ce"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/buttonOk"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/common_button_red"
+                android:text="确认"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

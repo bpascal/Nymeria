@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutMain"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/layoutTitleBar"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/app_main_color">
+
+        <LinearLayout
+            android:id="@+id/viewBack"
+            android:layout_width="40dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/cbl_item_bg"
+            android:gravity="center">
+
+            <View
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@mipmap/title_icon_back" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/viewClose"
+            android:layout_width="40dp"
+            android:layout_height="48dp"
+            android:layout_toRightOf="@+id/viewBack"
+            android:background="@drawable/cbl_item_bg"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@mipmap/title_icon_close" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/title_bar_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/viewProcess"
+            android:layout_toRightOf="@+id/viewClose"
+            android:lines="1"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/viewProcess"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/viewShare"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/cbl_item_bg"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@mipmap/article_detail_title_share" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/layoutTitleBar"
+        android:divider="#0000"
+        android:dividerHeight="0dp"
+        android:fadingEdge="none"
+        android:scrollbarSize="2dp"
+        android:scrollbarThumbVertical="@drawable/scrollbar_icon"
+        android:scrollbarTrackVertical="@drawable/scrollbar_bg" />
+
+    <include layout="@layout/merge_loading" />
+
+</RelativeLayout>

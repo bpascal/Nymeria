@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_background_gray"
+    android:orientation="vertical">
+
+
+    <!--顶部-->
+    <RelativeLayout
+        android:id="@+id/layoutTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/app_main_color">
+
+
+        <LinearLayout
+            android:id="@+id/viewBack"
+            android:layout_width="40dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/cbl_item_bg"
+            android:gravity="center">
+
+            <View
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@mipmap/title_icon_back" />
+        </LinearLayout>
+
+
+        <!--标题-->
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="我的收益"
+            android:textColor="@color/common_text_black"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <ExpandableListView
+
+        android:id="@+id/listViewIncome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layoutTitleBar"
+        android:childDivider="@null"
+        android:divider="@null"
+        android:dividerHeight="0dp">
+
+
+    </ExpandableListView>
+
+    <Button
+        android:id="@+id/buttonTake"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/common_button_red"
+        android:text="提取收益"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+</RelativeLayout>

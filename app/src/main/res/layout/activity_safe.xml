@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_background_gray"
+    android:orientation="vertical">
+
+
+    <!--顶部-->
+    <RelativeLayout
+        android:id="@+id/layoutTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/app_main_color"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+
+
+        <LinearLayout
+            android:id="@+id/viewBack"
+            android:layout_width="40dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/cbl_item_bg"
+            android:gravity="center">
+
+            <View
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@mipmap/title_icon_back" />
+        </LinearLayout>
+
+
+
+        <!--标题-->
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="安全中心"
+            android:textColor="@color/common_text_black"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <!--整体部分外围包装一个ScrollView-->
+    <ScrollView
+        android:id="@+id/scrollViewContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/layoutTitleBar">
+
+        <!--整体部分-->
+        <LinearLayout
+            android:id="@+id/linearLayoutContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <!--剩余的内容-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/common_background_white"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <!--账单流水-->
+                <LinearLayout
+                    android:id="@+id/linearLayoutLoginPwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical">
+
+                    <View
+                        android:layout_width="21.33dp"
+                        android:layout_height="21.33dp"
+                        android:layout_marginLeft="14dp"
+                        android:layout_marginRight="14dp"
+                        android:background="@mipmap/more_icon_txnorderlist" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:lines="1"
+                        android:text="登录密码"
+                        android:textColor="@color/gray"
+                        android:textSize="15sp" />
+
+                    <View
+                        android:layout_width="37.5dp"
+                        android:layout_height="37.5dp"
+                        android:background="@mipmap/icon_arrow" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#ededed" />
+
+                <!--安全中心-->
+                <LinearLayout
+                    android:id="@+id/linearLayoutPayPwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical">
+
+                    <View
+                        android:layout_width="21.33dp"
+                        android:layout_height="21.33dp"
+                        android:layout_marginLeft="14dp"
+                        android:layout_marginRight="14dp"
+                        android:background="@mipmap/more_icon_safe_center" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:lines="1"
+                        android:text="支付密码"
+                        android:textColor="@color/gray"
+                        android:textSize="15sp" />
+
+                    <View
+                        android:layout_width="37.5dp"
+                        android:layout_height="37.5dp"
+                        android:background="@mipmap/icon_arrow" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#ededed" />
+
+                <!--实名认证-->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#ededed" />
+
+                <!--个人资料-->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#ededed" />
+
+                <!--收货信息管理-->
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

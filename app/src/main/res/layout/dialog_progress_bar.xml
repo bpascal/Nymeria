@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:background="@drawable/hkb_dialog_bg"
+    android:gravity="center"
+    android:minHeight="100dp"
+    android:minWidth="100dp"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <View
+        android:id="@+id/viewLoading"
+        android:layout_width="31dp"
+        android:layout_height="31dp"
+        android:background="@mipmap/hkb_loading" />
+
+    <TextView
+        android:id="@+id/textViewMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="正在加载，请稍后"
+        android:textColor="#FFF"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+</LinearLayout>

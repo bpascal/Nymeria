@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <!--用户名-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/app_main_color">
+
+
+        <LinearLayout
+            android:id="@+id/viewBack"
+            android:layout_width="40dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/cbl_item_bg"
+            android:gravity="center">
+
+            <View
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@mipmap/title_icon_back" />
+        </LinearLayout>
+
+        <!--标题-->
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="我的资产"
+            android:textColor="@color/common_text_black"
+            android:textSize="20sp" />
+
+
+    </RelativeLayout>
+
+
+    <!--绿色资金介绍部分-->
+    <RelativeLayout
+        android:id="@+id/relativeLayoutFunds"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/app_main_color">
+
+        <!--昨日收益部分-->
+        <RelativeLayout
+            android:id="@+id/relativeLayoutTotalBalance"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:id="@+id/textViewYesterdayAmtStr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:text="总资产"
+                android:textColor="@color/common_text_white"
+                android:textSize="14sp" />
+
+
+            <ImageView
+                android:id="@+id/imageViewSwitchSeeAmt"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/textViewYesterdayAmtStr"
+                android:src="@mipmap/more_icon_eyes_open"
+                android:textColor="@color/common_text_white"
+                android:textSize="28sp" />
+
+
+            <TextView
+                android:id="@+id/textViewMyTotalAmt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="32786.29"
+                android:textColor="@color/common_text_white"
+                android:textSize="28sp" />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!--中间部分-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/app_main_color" />
+
+        <View
+
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/balance_circle_white_bg" />
+
+        <!--图表-->
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/pieChartMyBalance"
+            android:layout_width="200dp"
+            android:layout_centerInParent="true"
+            android:layout_height="200dp"
+            android:foregroundGravity="center_horizontal" />
+
+
+    </RelativeLayout>
+
+
+    <!--可用余额-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#f7f7f7"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <View
+
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:background="#ff6b8e" />
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical|left"
+            android:text="可用余额"
+            android:textColor="#333"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textViewAbleBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="3000元"
+            android:textColor="#c8152d"
+            android:textSize="16sp" />
+
+
+    </LinearLayout>
+
+
+    <!--账户余额-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical|left"
+            android:text="可用账户余额"
+            android:textColor="#666"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textAccountBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="3000元"
+            android:textColor="#666"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+    <!--账户收益-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical|left"
+
+            android:text="可用账户收益"
+            android:textColor="#666"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textViewShareBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="3000元"
+            android:textColor="#666"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+
+    <!--冻结资产-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="#f7f7f7"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <View
+
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:background="#0dbe9c" />
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical|left"
+            android:text="冻结资金"
+            android:textColor="#333"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textViewHoldBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="3000元"
+            android:textColor="#c8152d"
+            android:textSize="16sp" />
+
+
+    </LinearLayout>
+
+
+    <!--账户余额-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical|left"
+            android:text="冻结余额"
+            android:textColor="#666"
+
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textViewHoldAccountBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="3000元"
+            android:textColor="#666"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+    <!--账户收益-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical|left"
+            android:text="冻结收益"
+            android:textColor="#666"
+
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textViewHoldShareBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="3000元"
+            android:textColor="#666"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

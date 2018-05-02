@@ -1,0 +1,30 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/viewLoading"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/layoutTitleBar"
+        android:background="#FFF"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View
+            android:id="@+id/progressBarLoading"
+            android:layout_width="38.67dp"
+            android:layout_height="38.67dp"
+            android:layout_marginBottom="10dp"
+            android:background="@mipmap/loading_view_icon" />
+
+        <TextView
+            android:id="@+id/textViewLoading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:text="正在加载..."
+            android:textColor="#999"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</merge>

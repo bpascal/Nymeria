@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="80dp"
+    android:layout_height="100dp">
+
+    <!--学生图片-->
+    <ImageView
+        android:id="@+id/imageViewStudent"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitXY"
+        android:src="@mipmap/swipe_loading" />
+
+    <!--学生姓名-->
+    <TextView
+        android:id="@+id/textViewStudentName"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@color/common_area_meng"
+        android:gravity="center"
+        android:text="牛逼"
+        android:textColor="@color/common_text_white"
+        android:textSize="16sp" />
+
+    <!--蒙层-->
+    <View
+        android:id="@+id/linearLayoutMeng"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/common_area_meng"
+        android:visibility="visible" />
+
+</RelativeLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="36dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="20dp">
+
+    <LinearLayout
+        android:layout_width="30dp"
+        android:layout_height="36dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#a0a0a0" />
+
+        <View
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:background="@drawable/income_by_day_little_circle_icon" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#a0a0a0" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|left"
+        android:text="10-29"
+        android:textColor="#999"
+        android:textSize="12sp" />
+
+    <ProgressBar
+        android:id="@+id/progressBarContent"
+        style="@style/income_item_progress_style"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1"
+        android:max="100"
+        android:progress="30" />
+
+    <TextView
+        android:id="@+id/textViewDayAmt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="3000元"
+        android:textColor="#333"
+        android:textSize="12sp" />
+
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 进度显示View的属性定义 -->
+    <declare-styleable name="PointView">
+        <attr name="pointSpacing" format="dimension" />
+        <attr name="pointSelectedColor" format="color" />
+        <attr name="pointUnSelectedColor" format="color" />
+        <attr name="pointRadius" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="CustomImageView">
+        <attr name="borderRadius" format="dimension" />
+        <attr name="type">
+            <enum name="circle" value="0" />
+            <enum name="round" value="1" />
+        </attr>
+        <attr name="src" format="reference" />
+    </declare-styleable>
+    <!-- 滑动cover -->
+    <declare-styleable name="FancyCoverFlow">
+        <attr name="unselectedAlpha" format="float" />
+        <attr name="unselectedSaturation" format="float" />
+        <attr name="unselectedScale" format="float" />
+        <attr name="maxRotation" format="integer" />
+        <attr name="scaleDownGravity" format="float" />
+        <attr name="actionDistance" format="integer">
+            <enum name="auto" value="2147483647" />
+        </attr>
+    </declare-styleable>
+
+</resources>

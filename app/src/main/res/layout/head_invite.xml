@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayoutTop"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:background="#f7f7f7"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:ignore="Suspicious0dp">
+        <!--直推人数-->
+        <TextView
+            android:id="@+id/textViewChildNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="#333"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/textViewChildNumStr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="直推人数"
+            android:textColor="#444"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="135dp"
+        android:layout_height="135dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/invite_total_children_count_bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:ignore="Suspicious0dp">
+        <!--总人数-->
+        <TextView
+            android:id="@+id/textViewTotalNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="#333"
+            android:textSize="56.67sp" />
+
+        <TextView
+            android:id="@+id/textViewTotalNumStr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="总邀请数"
+            android:textColor="#333"
+
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:layout_weight="1" />
+
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:ignore="Suspicious0dp">
+        <!--非直推人数-->
+        <TextView
+            android:id="@+id/textViewOtherNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="#333"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/textViewOtherNumStr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="其他邀请"
+            android:textColor="#444"
+            android:textSize="12sp" />
+    </LinearLayout>
+</LinearLayout>

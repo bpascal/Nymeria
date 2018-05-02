@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_background_white">
+
+    <!--顶部-->
+    <RelativeLayout
+        android:id="@+id/layoutTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/common_area_green">
+
+        <!--标题-->
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="设置蓝牙"
+            android:textColor="@color/common_text_white"
+            android:textSize="20sp" />
+
+        <!--扫描部分-->
+        <LinearLayout
+            android:id="@+id/linearLayoutScan"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true">
+
+            <TextView
+                android:id="@+id/textViewScan"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="扫描"
+                android:textColor="@color/common_text_black"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!--中间选择的部分-->
+
+    <View
+        android:id="@+id/viewListTopLine"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/layoutTitleBar"
+        android:layout_marginTop="20dp"
+        android:background="@color/common_text_white" />
+
+    <ListView
+        android:id="@+id/listViewDeviceList"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/viewListTopLine"
+        android:divider="@color/common_text_white"
+        android:dividerHeight="0.5dp"
+        android:scrollbars="none" />
+
+    <View
+        android:id="@+id/viewListBottomLine"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/listViewDeviceList"
+        android:layout_marginTop="20dp"
+        android:background="@color/common_text_white" />
+
+    <!--确定按钮-->
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/viewListBottomLine"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@mipmap/button_submit_background"
+        android:gravity="top|center_horizontal"
+        android:paddingTop="12dp"
+        android:text="确    定"
+        android:textColor="@color/common_text_white"
+        android:textSize="18sp" />
+
+</RelativeLayout>

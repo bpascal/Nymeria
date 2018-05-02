@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/layoutTitleBar"
+
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/app_main_color"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+
+        <LinearLayout
+            android:id="@+id/viewBack"
+            android:layout_width="40dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/cbl_item_bg"
+            android:gravity="center">
+
+            <View
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@mipmap/title_icon_back" />
+        </LinearLayout>
+
+
+        <!--标题-->
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="卡详情"
+            android:textColor="@color/common_text_black"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:id="@+id/viewMore"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/cbl_item_bg"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/textViewMore"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:gravity="center"
+                android:text="更多"
+                android:textColor="@color/common_text_white"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <!--下方列表-->
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layoutTitleBar">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp"
+                    android:background="@color/app_main_color">
+
+
+                    <LinearLayout
+                        android:id="@+id/cardInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@mipmap/card_detail_bg">
+
+
+                        <ImageView
+                            android:id="@+id/imageViewBankIcon"
+                            android:layout_width="46.67dp"
+                            android:layout_height="46.67dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="20dp"
+                            android:src="@mipmap/bankcard_icon_default" />
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:paddingTop="20dp">
+
+                            <TextView
+                                android:id="@+id/textViewBankName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="招商银行"
+                                android:textColor="#333"
+                                android:textSize="24dp" />
+
+                            <TextView
+                                android:id="@+id/textViewCardType"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="信用卡"
+                                android:textColor="#333"
+                                android:textSize="12dp" />
+
+
+                            <TextView
+                                android:id="@+id/textViewCardNo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="**** **** **** 1540"
+                                android:textColor="#333"
+                                android:textSize="25dp" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutPayTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_alignBottom="@+id/cardInfo"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:id="@+id/textViewBillDate"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="账单日：5日"
+                            android:textColor="#666"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="#dcdcdc" />
+
+                        <TextView
+                            android:id="@+id/textViewPayOffDate"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="还款日：25日"
+                            android:textColor="#666"
+                            android:textSize="12sp" />
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+                <!--用户名-->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/common_gap_gray" />
+
+                <!--密码-->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/common_gap_gray" />
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutListTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#fff"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:lines="1"
+                        android:text="还款计划列表"
+                        android:textColor="#333"
+                        android:textSize="14.67sp" />
+
+
+                    <!--添加还款计划-->
+                    <LinearLayout
+                        android:id="@+id/viewAddPayOffPlan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:background="#fff"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingRight="10dp">
+
+
+                        <ImageView
+                            android:layout_width="14.67dp"
+                            android:layout_height="14.67dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="5dp"
+                            android:src="@mipmap/index_icon_add" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:lines="1"
+                            android:text="添加还款计划"
+                            android:textColor="#666666"
+                            android:textSize="12sp" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutPayoffPlan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutEmpty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="#FFF"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:background="@drawable/invite_item_bg"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/imageViewAddPlan"
+                            android:layout_width="66.66dp"
+                            android:layout_height="66.66dp"
+                            android:src="@mipmap/icon_add_plan" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textViewAddPlan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="15dp"
+                        android:text="您暂未添加还款计划，点击'+'添加还款计划"
+                        android:textColor="#999999"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

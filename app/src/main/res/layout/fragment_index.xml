@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bobo="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+
+    <!--主体-->
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:overScrollMode="never"
+            android:id="@+id/scrollViewContent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/layoutTitleBar"
+            android:scrollbars="none">
+
+            <!--Banner部分-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!--图片显示在这里-->
+                    <LinearLayout
+                        android:id="@+id/layoutViewPager"
+                        android:layout_width="fill_parent"
+                        android:layout_height="25dp"
+                        android:orientation="horizontal">
+
+                    </LinearLayout>
+
+                    <!--导航点-->
+                    <com.codido.nymeria.view.PointView
+                        android:id="@+id/pointView"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        bobo:pointRadius="3dp"
+                        bobo:pointSpacing="10dp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#f2f2f2" />
+
+
+                <LinearLayout
+                    android:id="@+id/viewNotice"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="#fff"
+                    android:gravity="center_vertical">
+
+
+                    <ImageView
+                        android:layout_width="14.67dp"
+                        android:layout_height="14.67dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@mipmap/index_icon_notice" />
+
+                    <TextView
+                        android:id="@+id/textViewNotice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:lines="1"
+                        android:paddingRight="10dp"
+                        android:singleLine="true"
+                        android:text="暂无公告..."
+                        android:textColor="#666666"
+                        android:textSize="12sp" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#d8d8d8" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="7.33dp"
+                    android:background="#f3f3f3" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#d8d8d8" />
+
+
+                <!--添加银行卡-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#fff"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:lines="1"
+                        android:text="银行卡列表"
+                        android:textColor="#333"
+                        android:textSize="14.67sp" />
+
+
+                    <!--添加银行卡-->
+                    <LinearLayout
+                        android:id="@+id/viewAddBankCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:background="#fff"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingRight="10dp">
+
+
+                        <ImageView
+                            android:layout_width="14.67dp"
+                            android:layout_height="14.67dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="5dp"
+                            android:src="@mipmap/index_icon_add" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:lines="1"
+                            android:text="添加银行卡"
+                            android:textColor="#666666"
+                            android:textSize="12sp" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearEntries"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFF"
+                    android:gravity="center"
+                    android:orientation="vertical"></LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutEmpty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="#FFF"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:background="@drawable/invite_item_bg"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/imageViewAddPlan"
+                            android:layout_width="66.66dp"
+                            android:layout_height="66.66dp"
+                            android:src="@mipmap/icon_add_plan" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textViewAddPlan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="15dp"
+                        android:text="您暂未添加还款计划，点击'+'添加还款计划"
+                        android:textColor="#999999"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/bobo_merge_loading" />
+</RelativeLayout>
