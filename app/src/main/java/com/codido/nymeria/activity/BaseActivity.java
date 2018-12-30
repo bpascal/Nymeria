@@ -305,16 +305,6 @@ public abstract class BaseActivity extends FragmentActivity implements ProcessLi
     }
 
     /**
-     * 获取用户上次停留在在登录界面是否点击过暂不注册，随便看看
-     *
-     * @param context
-     */
-    public static boolean isNoRegisterEnter(Context context) {
-        SharedPreferences pref = context.getSharedPreferences(PREFERENCES_LAST_LOGIN_INFO, 0);
-        return pref.getBoolean("NoRegisterEnter", false);
-    }
-
-    /**
      * 根据ID隐藏某个View
      *
      * @param res
