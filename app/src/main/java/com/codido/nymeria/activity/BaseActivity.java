@@ -55,7 +55,7 @@ public abstract class BaseActivity extends FragmentActivity implements ProcessLi
     /**
      * 常量，用来在给系统中其他的常量赋值，每次赋值后+1，以保证系统中的所有整形常量都绝对唯一
      */
-    public static int FIRST_VAL = 13;
+    public static int FIRST_VAL = 18;
 
     /**
      * 基本常量
