@@ -7,7 +7,6 @@ import android.content.SharedPreferences.Editor;
 import com.alibaba.fastjson.JSON;
 import com.codido.nymeria.bean.parser.MsgParser;
 import com.codido.nymeria.bean.resp.BaseResp;
-import com.codido.nymeria.bean.vo.UserInfoVo;
 
 /**
  * 登录数据缓存对象

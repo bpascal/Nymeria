@@ -65,86 +65,19 @@
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.NoActionBar" />
         <!--我的资产-->
-        <activity
-            android:name=".activity.MyBalanceActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Holo.NoActionBar" />
         <!--充值页面-->
-        <activity
-            android:name=".activity.RechargeActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Holo.NoActionBar" />
         <!--充值页面-->
-        <activity
-            android:name=".activity.WithdrawActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Holo.NoActionBar" />
         <!--我的收益-->
 
-        <activity
-            android:name=".activity.InComeActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Holo.NoActionBar">
-
-        </activity>
-
         <!--邀请页面-->
-        <activity
-            android:name=".activity.InviteListActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Holo.NoActionBar">
-
-        </activity>
 
         <!--流水列表页面-->
-        <activity
-            android:name=".activity.TxnOrderListActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Holo.NoActionBar">
-
-        </activity>
         <!--银行卡详情页面-->
-        <activity
-            android:name=".activity.CardDetailActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Holo.NoActionBar" />
         <!--添加银行卡-->
-        <activity
-            android:name=".activity.AddCardActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Holo.NoActionBar" />
         <!--完善银行卡-->
-        <activity
-            android:name=".activity.AddCardDetailActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Holo.NoActionBar" />
         <!--完善银行卡-->
-        <activity
-            android:name=".activity.SmsCodeActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Holo.NoActionBar" />
         <!--还款计划详情页面-->
-        <activity
-            android:name=".activity.PayOffPlanDetailActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Holo.NoActionBar" />
         <!--新增还款计划-->
-        <activity
-            android:name=".activity.AddPayOffPlanActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Holo.NoActionBar" />
         <!--Web浏览器-->
         <activity
             android:name=".activity.WebActivity"
@@ -152,23 +85,8 @@
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.NoActionBar" />
         <!--安全中心-->
-        <activity
-            android:name=".activity.SafeActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Holo.NoActionBar" />
         <!--修改密码-->
-        <activity
-            android:name=".activity.ChangePwdActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Holo.NoActionBar" />
         <!--重置密码-->
-        <activity
-            android:name=".activity.ChangePwdBySmsCodeActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Holo.NoActionBar" />
 
         <!--主页面-->
         <activity
@@ -184,18 +102,8 @@
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.NoActionBar" />
         <!--收入计算页面-->
-        <activity
-            android:name=".activity.InComeByDayActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Holo.NoActionBar" />
 
         <!--二维码分享页面-->
-        <activity
-            android:name=".activity.QrcodeActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Holo.NoActionBar" />
 
         <!--登录广播接收器-->
         <receiver android:name=".receiver.LoginBroadcastReceiver" >

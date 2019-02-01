@@ -7,7 +7,6 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.codido.nymeria.R;
 import com.codido.nymeria.adapter.BaseItemHolder;
-import com.codido.nymeria.bean.vo.StudentInfo;
 import com.codido.nymeria.util.YUtils;
 
 /**

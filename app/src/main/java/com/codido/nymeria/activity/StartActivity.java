@@ -11,10 +11,8 @@ import android.widget.TextView;
 import com.codido.nymeria.R;
 import com.codido.nymeria.bean.req.BaseReq;
 import com.codido.nymeria.bean.req.BaseReqData;
-import com.codido.nymeria.bean.req.GetAppServerReqData;
 import com.codido.nymeria.bean.resp.BaseResp;
 import com.codido.nymeria.bean.resp.CheckUpdateResp;
-import com.codido.nymeria.bean.resp.GetAppServerResp;
 import com.codido.nymeria.dialog.OkDialog;
 import com.codido.nymeria.util.FileManager;
 import com.codido.nymeria.util.Global;
@@ -84,20 +82,10 @@ public class StartActivity extends BaseActivity {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            //获取服务器地址并且覆盖
-            sendGetServerUrlRequest();
+            runCallFunctionInHandler(CALL_QUERY_SUCCESS, null);
         }
     };
 
-    /**
-     * 发送获取服务器地址的请求
-     */
-    private void sendGetServerUrlRequest() {
-        GetAppServerReqData reqData = new GetAppServerReqData();
-
-        BaseReq baseReq = new BaseReq(Global.key_getBjjtAppServer, reqData);
-        ProcessManager.getInstance().addProcess(this, baseReq, this);
-    }
 
     /**
      * 检查更新函数
@@ -243,13 +231,7 @@ public class StartActivity extends BaseActivity {
 
     @Override
     public boolean onDone(BaseResp responseBean) {
-        if (Global.key_getBjjtAppServer.equals(responseBean.getKey())) {
-            GetAppServerResp resp = (GetAppServerResp) responseBean;
-            if (resp.getUrl() != null && !"".equals(resp.getUrl())) {
-                Global.API_SERVER_ADDRESS_CONTEXT = resp.getUrl();
-            }
-            runCallFunctionInHandler(CALL_QUERY_SUCCESS, responseBean);
-        } else if (Global.key_checkUpdate.equals(responseBean.getKey())) {
+        if (Global.key_checkUpdate.equals(responseBean.getKey())) {
             if (responseBean.isOk()) {
                 // 通知界面返回更新
                 runCallFunctionInHandler(CALL_CHECK_UPDATE_SUCCESS, responseBean);

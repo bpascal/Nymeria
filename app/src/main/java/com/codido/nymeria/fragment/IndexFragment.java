@@ -18,21 +18,12 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.codido.nymeria.R;
-import com.codido.nymeria.activity.AddCardActivity;
 import com.codido.nymeria.activity.BaseActivity;
-import com.codido.nymeria.activity.CardDetailActivity;
 import com.codido.nymeria.activity.WebActivity;
 import com.codido.nymeria.bean.req.BaseReq;
 import com.codido.nymeria.bean.req.BaseReqData;
-import com.codido.nymeria.bean.req.QueryBannerListReqData;
-import com.codido.nymeria.bean.req.QueryNoticeReqData;
 import com.codido.nymeria.bean.resp.BaseResp;
-import com.codido.nymeria.bean.resp.QueryBannerListResp;
-import com.codido.nymeria.bean.resp.QueryMyCardListResp;
-import com.codido.nymeria.bean.resp.QueryNoticeResp;
 import com.codido.nymeria.bean.vo.BannerVo;
-import com.codido.nymeria.bean.vo.CardVo;
-import com.codido.nymeria.bean.vo.NoticeVo;
 import com.codido.nymeria.util.Constants;
 import com.codido.nymeria.util.DataKeeper;
 import com.codido.nymeria.util.Global;
@@ -243,13 +234,6 @@ public class IndexFragment extends BaseFragment {
         } else {
             showToastText("公告为空");
         }
-    }
-
-    @OnClick({R.id.viewAddBankCard, R.id.linearLayoutEmpty})
-    void addBankCard() {
-
-        Intent intent = new Intent(getActivity(), AddCardActivity.class);
-        startActivityForResult(intent, REQ_FOR_ADD_CRAD);
     }
 
     @Override

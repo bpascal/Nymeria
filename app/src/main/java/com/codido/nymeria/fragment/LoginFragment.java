@@ -9,7 +9,6 @@ import android.widget.TextView;
 
 import com.codido.nymeria.R;
 import com.codido.nymeria.activity.BaseActivity;
-import com.codido.nymeria.activity.ChangePwdBySmsCodeActivity;
 import com.codido.nymeria.activity.MainActivity;
 import com.codido.nymeria.bean.req.BaseReq;
 import com.codido.nymeria.bean.req.LoginReqData;

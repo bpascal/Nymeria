@@ -1,7 +1,5 @@
 package com.codido.nymeria.bean.resp;
 
-import com.codido.nymeria.bean.vo.UserInfoVo;
-
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 

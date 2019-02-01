@@ -7,8 +7,6 @@ import com.codido.nymeria.R;
 import com.codido.nymeria.bean.req.BaseReq;
 import com.codido.nymeria.bean.req.BaseReqData;
 import com.codido.nymeria.bean.resp.BaseResp;
-import com.codido.nymeria.bean.resp.QueryKfInfoResp;
-import com.codido.nymeria.dialog.KfDialogDialog;
 import com.codido.nymeria.util.Global;
 import com.codido.nymeria.util.ProcessManager;
 

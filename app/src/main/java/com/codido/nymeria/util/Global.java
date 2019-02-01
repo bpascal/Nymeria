@@ -14,8 +14,6 @@ import android.provider.MediaStore;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 
-import com.codido.nymeria.bean.vo.UserInfoVo;
-
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.FileReader;
@@ -37,11 +35,6 @@ import java.util.List;
  * 应用全局控制对象，包括全局参数，和一些全局的方法
  */
 public class Global {
-
-    /**
-     * 用户信息
-     */
-    public static UserInfoVo userInfo;
 
     /**
      * 资产显示状态
@@ -145,11 +138,6 @@ public class Global {
     public static final String IMG_CACHE_NAME = Environment.getExternalStorageDirectory() + "/.dada/.img/";
 
     /**
-     * 获取验证码
-     */
-    public static final String key_getSmsCode = "/pub/getSmsCode.do";
-
-    /**
      * 检查更新
      */
     public static final String key_checkUpdate = "/pub/checkUpdate.do";
@@ -165,141 +153,17 @@ public class Global {
     public static final String key_queryBannerList = "/pub/queryBannerList.do";
 
     /**
-     * 查询公告
-     */
-    public static final String key_queryNotice = "/pub/queryNotice.do";
-
-    /**
-     * 查询首页模块接口
-     */
-    public static final String key_queryHomeModuleList = "/pub/queryHomeModuleList";
-
-    /**
-     * 使用短信验证码修改密码
-     */
-    public static final String key_changePwdBySmsCode = "/user/changePwdBySmsCode.do";
-
-    /**
-     * 修改密码
-     */
-    public static final String key_changePwd = "/user/changePwd.do";
-
-    /**
-     * 用户银行卡列表查询
-     */
-    public static final String key_queryMyCardList = "/user/queryMyCardList.do";
-
-    /**
-     * 根据卡bin查询归属银行
-     */
-    public static final String key_queryBankBybin = "/user/queryBankBybin.do";
-
-    /**
      * 给预留号码下发短信验证码
      */
     public static final String key_sendSmsCode = "/user/sendSmsCode.do";
 
     /**
-     * 添加银行卡
-     */
-    public static final String key_addMyCard = "/user/addMyCard.do";
-
-    /**
-     * 解绑银行卡
-     */
-    public static final String key_removeMyCard = "/user/removeMyCard.do";
-
-    /**
-     * 还款费率计算
-     */
-    public static final String key_calcPayoffFee = "/user/calcPayoffFee.do";
-
-
-    /**
-     * 添加还款计划
-     */
-    public static final String key_addPayoffPlan = "/user/addPayoffPlan.do";
-
-    /**
-     * 查询还款计划列表
-     */
-    public static final String key_queryPayoffPlanList = "/user/queryPayoffPlanList.do";
-
-    /**
-     * 查询还款计划详情
-     */
-    public static final String key_queryPayoffPlanDetail = "/user/queryPayoffPlanDetail.do";
-
-    /**
-     * 取消还款计划
-     */
-    public static final String key_cancelPayoffPlan = "/user/cancelPayoffPlan.do";
-
-    /**
-     * 查询我的邀请
-     */
-    public static final String key_queryMyInviteeList = "/user/queryMyInviteeList.do";
-
-    /**
-     * 查询我的用户信息
-     */
-    public static final String key_queryMyUserInfo = "/user/queryMyUserInfo.do";
-    /**
-     * 查询客服信息
-     */
-    public static final String key_queryKfInfo = "/pub/queryKfInfo.do";
-
-    /**
-     * 查询我的资产结构
-     */
-    public static final String key_queryMyBalance = "/user/queryMyBalance.do";
-
-    /**
-     * 查询我的收益
-     */
-    public static final String key_queryMyEarn = "/user/queryMyEarn.do";
-
-    /**
-     * 按日期查询收益
-     */
-    public static final String key_queryEarnByDay = "/user/queryEarnByDay.do";
-
-    /**
-     * 查询账单交易记录列表
-     */
-    public static final String key_queryTxnOrderList = "/txn/queryTxnOrderList.do";
-    /**
-     * 提现银行卡查询
-     */
-    public static final String key_queryWithdrawCardList = "/txn/queryWithdrawCardList.do";
-
-    /**
-     * 充值请求
-     */
-    public static final String key_recharge = "/txn/recharge.do";
-
-    /**
-     * 提现请求
-     */
-    public static final String key_withdraw = "/txn/withdraw.do";
-    /**
      * 用户退出
      */
     public static final String key_logout = "/user/logout.do";
     /**
-     * 查询参数
-     */
-    public static final String key_queryParameter = "/pub/queryParameter.do";
-
-    /**
-     * 获取服务器地址
-     */
-    public static final String key_getBjjtAppServer = "/getBjjtAppServer";
-
-    /**
      * 获取分享参数
      */
-    public static final String key_getShareParam = "/pub/getShareParam.do";
 
     /**
      * 打印通用日志的TAG
@@ -602,16 +466,16 @@ public class Global {
         }
     }
 
+    /**
+     * 通过key获取请求地址
+     * @param key
+     * @return
+     */
     public static String getAddressByKey(String key) {
         if (key == null) {
             return null;
         }
-        //Junjie.Lai 增加了一个地址
-        if(key_getBjjtAppServer.equals(key)){
-            return TOTAL_BASE_ADDRESS + key;
-        }else{
-            return getBaseUrl() + key;
-        }
+        return getBaseUrl() + key;
     }
 
     /**
@@ -645,7 +509,7 @@ public class Global {
     public static String getBaseAddress() {
 
         //Junjie.Lai 这里加了一下地址
-        if(API_SERVER_ADDRESS_CONTEXT != null && !"".equals(API_SERVER_ADDRESS_CONTEXT)){
+        if (API_SERVER_ADDRESS_CONTEXT != null && !"".equals(API_SERVER_ADDRESS_CONTEXT)) {
             return API_SERVER_ADDRESS_CONTEXT;
         }
 
@@ -656,7 +520,6 @@ public class Global {
         if (SERVER_MODEL_ONLINE == SERVER_MODEL) {
             return HTML_BASE_ADDRESS;
         }
-
 
 
         return "";

@@ -5,7 +5,6 @@ import android.widget.TextView;
 
 import com.codido.nymeria.R;
 import com.codido.nymeria.adapter.BaseItemHolder;
-import com.codido.nymeria.bean.vo.InviteeVo;
 import com.codido.nymeria.util.Constants;
 import com.codido.nymeria.util.YUtils;
 

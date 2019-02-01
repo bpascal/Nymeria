@@ -11,9 +11,6 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.codido.nymeria.R;
-import com.codido.nymeria.activity.InComeByDayActivity;
-import com.codido.nymeria.bean.vo.DayEarnVo;
-import com.codido.nymeria.bean.vo.MonthEarnVo;
 
 import java.util.List;
 

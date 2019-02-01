@@ -1,6 +1,5 @@
 package com.codido.nymeria.bean.resp;
 
-import com.codido.nymeria.bean.vo.Operate;
 import com.codido.nymeria.util.Global;
 
 import java.io.Serializable;

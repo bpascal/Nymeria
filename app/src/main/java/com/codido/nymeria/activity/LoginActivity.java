@@ -70,12 +70,6 @@ public class LoginActivity extends BaseActivity {
         sendLoginRequest(loginUserName, loginPassword);
     }
 
-    @OnClick(R.id.textViewForgetPasswords)
-    void textViewForgetPasswordsEvent() {
-        ChangePwdBySmsCodeActivity.changeLoginPassword(this);
-
-    }
-
 
     /**
      * 跳转成功页面
