@@ -40,7 +40,7 @@ public class AboutActivity extends BaseActivity {
 
         BaseReqData reqData = new BaseReqData();
 
-        BaseReq baseReq = new BaseReq(Global.key_queryKfInfo, reqData);
+        BaseReq baseReq = new BaseReq(Global.key_checkUpdate, reqData);
 
 
         ProcessManager.getInstance().addProcess(this, baseReq, this);
@@ -54,13 +54,6 @@ public class AboutActivity extends BaseActivity {
     @OnClick(R.id.linearLayoutKf)
     void kfMobile() {
 
-
-        if (resp != null && resp.getKfPhoneList() != null && resp.getKfPhoneList().size()>0) {
-
-            KfDialogDialog kfDialogDialog = new KfDialogDialog(this, resp.getKfPhoneList() );
-            kfDialogDialog.show();
-
-        }
     }
 
 
@@ -86,20 +79,9 @@ public class AboutActivity extends BaseActivity {
 
     @Override
     public boolean onDone(BaseResp responseBean) {
-        if (Global.key_queryKfInfo.equals(responseBean.getKey())) {
-            //获取订单列表接口响应
-            if (responseBean.isOk()) {
 
-                runCallFunctionInHandler(CALL_QUERY_SUCCESS, responseBean);
-
-            } else {
-                runCallFunctionInHandler(CALL_QUERY_FAILD, responseBean);
-            }
-        }
         return false;
     }
-
-    QueryKfInfoResp resp;
 
     @Override
     public void call(int callID, Object... args) {
@@ -107,11 +89,6 @@ public class AboutActivity extends BaseActivity {
 
             cancelProgressDialog();
 
-            resp = (QueryKfInfoResp) args[0];
-
-            textViewKFEmail.setText(resp.getKfEmail());
-            textViewKFWeiXin.setText(resp.getKfWeixin());
-            textViewKFTime.setText(resp.getServiceTime());
 
 
 

@@ -123,7 +123,6 @@ public class LoginActivity extends BaseActivity {
             if (responseBean.isOk()) {
                 LoginResp loginResp = (LoginResp) responseBean;
                 Global.sid = loginResp.getSid();
-                Global.userInfo = loginResp.getUserInfo();
                 Global.mobile = loginUserName;
 
                 DataKeeper.saveLoginData(this);

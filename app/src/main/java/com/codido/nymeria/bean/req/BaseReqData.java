@@ -24,9 +24,7 @@ public class BaseReqData implements Serializable {
 
 
     public BaseReqData() {
-        if (Global.userInfo != null) {
-            userId = Global.userInfo.getUserId();
-        }
+
     }
 
     public String getB() {

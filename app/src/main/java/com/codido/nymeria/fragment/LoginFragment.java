@@ -70,7 +70,6 @@ public class LoginFragment extends BaseFragment {
 
     @OnClick(R.id.textViewForgetPasswords)
     void textViewForgetPasswordsEvent(){
-        ChangePwdBySmsCodeActivity.changeLoginPassword(getActivity());
     }
 
     @Override

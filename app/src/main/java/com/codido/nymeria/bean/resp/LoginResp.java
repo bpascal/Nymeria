@@ -18,9 +18,5 @@ public class LoginResp extends BaseResp {
      */
     private String sid;
 
-    /**
-     * 主账户ID
-     */
-    private UserInfoVo userInfo;
 
 }

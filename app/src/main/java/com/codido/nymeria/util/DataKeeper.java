@@ -94,10 +94,9 @@ public class DataKeeper {
      * @param context
      */
     public static void saveLoginData(Context context) {
-        SharedPreferences pref = context.getSharedPreferences(LOGIN_DATA_SAVE_NAME, Context.MODE_APPEND);
+        SharedPreferences pref = context.getSharedPreferences(LOGIN_DATA_SAVE_NAME, Context.MODE_PRIVATE);
         Editor editor = pref.edit();
 
-        editor.putString("Global.userinfo", JSON.toJSONString(Global.userInfo));
         editor.putString("Global.sid", Global.sid);
         editor.putString("Global.mobile", Global.mobile);
         editor.commit();
@@ -110,7 +109,7 @@ public class DataKeeper {
      * @param context
      */
     public static void clearLoginData(Context context) {
-        SharedPreferences pref = context.getSharedPreferences(LOGIN_DATA_SAVE_NAME, Context.MODE_APPEND);
+        SharedPreferences pref = context.getSharedPreferences(LOGIN_DATA_SAVE_NAME, Context.MODE_PRIVATE);
         Editor editor = pref.edit();
 
         editor.putString("Global.userinfo", null);
@@ -127,20 +126,8 @@ public class DataKeeper {
      * @return
      */
     public static boolean recoverLoginData(Context context) {
-        SharedPreferences pref = context.getSharedPreferences(LOGIN_DATA_SAVE_NAME, Context.MODE_APPEND);
-//
-        String data = pref.getString("Global.userinfo", null);
-        if (YUtils.isEmpty(data)) {
-            return false;
-        }
-        try {
-            Global.userInfo = JSON.parseObject(data, UserInfoVo.class);
-            Global.sid = pref.getString("Global.sid", null);
-            Global.mobile = pref.getString("Global.mobile", null);
-         } catch (Exception e) {
 
-        }
-        return Global.userInfo != null;
+        return false;
     }
 
     /**

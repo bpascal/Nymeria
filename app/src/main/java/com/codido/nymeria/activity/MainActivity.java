@@ -13,9 +13,6 @@ import android.widget.Toast;
 import com.codido.nymeria.R;
 import com.codido.nymeria.bean.resp.BaseResp;
 import com.codido.nymeria.fragment.BaseFragment;
-import com.codido.nymeria.fragment.IndexFragment;
-import com.codido.nymeria.fragment.InviteFragment;
-import com.codido.nymeria.fragment.MoreFragment;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -75,20 +72,6 @@ public class MainActivity extends BaseActivity {
     @BindView(R.id.viewMorePoint)
     View viewMorePoint;
 
-    /**
-     * 首页fragment
-     */
-    private IndexFragment indexFragment;
-
-    /**
-     * 开奖fragment
-     */
-    private InviteFragment inviteFragment;
-
-    /**
-     * 更多fragment
-     */
-    private MoreFragment moreFragment;
 
     /**
      * 当前选择项
@@ -150,10 +133,6 @@ public class MainActivity extends BaseActivity {
         if (fragment.isSelect()) {
             return;
         } else {
-            //把所有fragment设置为未选择
-            indexFragment.setIsSelect(false);
-            inviteFragment.setIsSelect(false);
-             moreFragment.setIsSelect(false);
             //将选中的fragment设置为选中
             fragment.setIsSelect(true);
             //执行选中的fragment的选中事件
@@ -167,16 +146,8 @@ public class MainActivity extends BaseActivity {
      * @param transaction 用于对Fragment执行操作的事务
      */
     private void hideFragments(FragmentTransaction transaction) {
-        if (indexFragment != null) {
-            transaction.hide(indexFragment);
-        }
-        if (inviteFragment != null) {
-            transaction.hide(inviteFragment);
-        }
 
-        if (moreFragment != null) {
-            transaction.hide(moreFragment);
-        }
+
     }
 
     /**
@@ -243,14 +214,6 @@ public class MainActivity extends BaseActivity {
         FragmentManager fragmentManager = getSupportFragmentManager();
         //FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
-
-        indexFragment = new IndexFragment();
-        inviteFragment = new InviteFragment();
-         moreFragment = new MoreFragment();
-
-        transaction.add(R.id.mainFrameLayout, indexFragment, String.valueOf(FRAGMENT_CODE_INDEX));
-        transaction.add(R.id.mainFrameLayout, inviteFragment, String.valueOf(FRAGMENT_CODE_LOTTERY));
-         transaction.add(R.id.mainFrameLayout, moreFragment, String.valueOf(FRAGMENT_CODE_MORE));
 
         transaction.commitAllowingStateLoss();
         fragmentManager.executePendingTransactions();

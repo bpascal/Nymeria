@@ -1,9 +1,9 @@
 apply plugin: 'com.android.application'
-//apply plugin: 'android-apt'
+apply plugin: 'com.jakewharton.butterknife'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion '27.0.3'
+    buildToolsVersion '28.0.3'
 
     flavorDimensions "default"
 
@@ -84,12 +84,12 @@ android {
 
             applicationVariants.all { variant ->
                 variant.outputs.all { output ->
-                    def outputFile = output.outputFile
-                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
-                        def fileName = "Turtledove_${variant.productFlavors[0].name}_release_${defaultConfig.versionName}.apk"
-                        //def fileName = outputFile.name.replace(".apk", "-${defaultConfig.versionName}.apk")
-                        outputFileName = fileName
-                    }
+//                    def outputFile = output.outputFile
+//                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+//
+//                    }
+                    def fileName = "Nymeria_${variant.productFlavors[0].name}_release_${defaultConfig.versionName}.apk"
+                    outputFileName = fileName
                 }
             }
         }
@@ -122,6 +122,7 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:3.7.0'
     implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:5.1.4'
     implementation 'javax.annotation:javax.annotation-api:1.2'
-    implementation 'org.projectlombok:lombok:1.16.18'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    implementation 'org.projectlombok:lombok:1.18.10'
+    annotationProcessor 'org.projectlombok:lombok:1.18.10'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 }

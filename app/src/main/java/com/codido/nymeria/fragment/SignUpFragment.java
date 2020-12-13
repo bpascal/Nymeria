@@ -155,12 +155,9 @@ public class SignUpFragment extends BaseFragment {
 
     @Override
     protected boolean callBack(BaseResp responseBean) {
-        if (Global.key_getSmsCode.equals(responseBean.getKey())) {
+        if (Global.key_checkUpdate.equals(responseBean.getKey())) {
             cancelProgressDialog();
             if (responseBean.isOk()) {
-                //接口返回成功
-                GetSmsCodeResp resp = (GetSmsCodeResp) responseBean;
-                serId = resp.getSerialCode();
                 new Thread(getCountDownRunable()).start();
                 showToastText("短信验证码正在发送");
             } else {
@@ -201,12 +198,7 @@ public class SignUpFragment extends BaseFragment {
      * 发送获取验证码的请求
      */
     private void sendGetSmsCodeRequest(String mobile) {
-        GetSmsCodeReqData reqData = new GetSmsCodeReqData();
-        reqData.setMobile(mobile);
-        reqData.setSmsType(GetSmsCodeReqData.TYPE_FOR_REGISTER_OR_LOGINS);
 
-        BaseReq baseReq = new BaseReq(Global.key_getSmsCode, reqData);
-        ProcessManager.getInstance().addProcess(getActivity(), baseReq, this);
     }
 
     /**

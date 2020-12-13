@@ -72,11 +72,6 @@ public class BaseResp implements Serializable {
     private String sid;
 
     /**
-     * 可以对本次查询对象进行的操作项
-     */
-    private List<Operate> operateList;
-
-    /**
      * session是否无效
      *
      * @return
@@ -151,24 +146,15 @@ public class BaseResp implements Serializable {
         this.creditDesc = creditDesc;
     }
 
-    public List<Operate> getOperateList() {
-        return operateList;
-    }
-
-    public void setOperateList(List<Operate> operateList) {
-        this.operateList = operateList;
-    }
-
     @Override
     public String toString() {
         return "BaseResp{" +
-                "creditDesc='" + creditDesc + '\'' +
-                ", singleCredit=" + singleCredit +
+                "singleCredit=" + singleCredit +
+                ", creditDesc='" + creditDesc + '\'' +
                 ", respCode='" + respCode + '\'' +
                 ", respMsg='" + respMsg + '\'' +
                 ", key='" + key + '\'' +
                 ", sid='" + sid + '\'' +
-                ", operateList=" + operateList +
                 '}';
     }
 }
